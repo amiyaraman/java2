@@ -4,7 +4,6 @@ public class CircularLinkedList
 
 {  
 
-    //defining a node in circular linked list  
 
     public class Node
 

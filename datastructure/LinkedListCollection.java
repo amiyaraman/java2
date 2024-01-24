@@ -3,97 +3,48 @@ package datastructure;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class LinkedListCollection
+public class LinkedListCollection {
+    public static void main(String[] args) {
+        ArrayList<String> collect = new ArrayList<String>();
+        collect.add("Java");
+        collect.add("is");
+        collect.add("awesome");
 
- {    
+        LinkedList<String> list2 = new LinkedList<>();
+        System.out.println("The new linked list is: " + list2);
 
-     //main method is called    
+        list2.add("Learning");
+        list2.addFirst("Welcome");
+        list2.addLast("DataStructures");
 
-    public static void main(String[] args)
+        list2.remove("Learning");
+        list2.removeFirst();
+        list2.removeLast();
 
-     {         
+        System.out.println("Updated linked list: " + list2);
 
-        // defining a string arraylist collection
+        System.out.println("First element: " + list2.getFirst());
+        System.out.println("Last element: " + list2.getLast());
 
-         ArrayList<String> collect = new ArrayList<String>();
+        list2.clear();
+        System.out.println("Cleared linked list: " + list2);
 
-         collect.add("Lets");
+        LinkedList<String> clonedList = (LinkedList<String>) list2.clone();
+        System.out.println("Cloned linked list: " + clonedList);
 
-         collect.add("learn");
+        System.out.println("Peek: " + list2.peek());
+        System.out.println("Peek First: " + list2.peekFirst());
+        System.out.println("Peek Last: " + list2.peekLast());
 
-         collect.add("DataStructures");      
+        System.out.println("Size: " + list2.size());
 
-//passing the collection as a parameter to the LinkedList constructor
+        // Adding more elements for demonstration
+        list2.add("Hello");
+        list2.add("World");
 
-         LinkedList List2 = new LinkedList();
+        System.out.println("Updated linked list: " + list2);
 
-         //displaying the elements of the list
-
-         System.out.println("The new linked list is: " + List2);
-
-    }    
-
-}    
- 
-/*
-There are several methods associated with a Linked List in Java. Some of them are:
-
-add()
-The add() method is used to insert elements into the list.
-
-addFirst()
-The addFirst() method is used to insert elements to the beginning of the list.
-
- addLast()
-The addLast() method is used to insert elements at the end of the list.
-
-remove()
-The remove() method is used to remove the elements from the list. 
-
-removeFirst()
-The removeFirst() method is used to remove the elements from the beginning of the list.
-
- removeLast()
-The removeFirst() method is used to remove the elements from the end of the list.
-
- getFirst()
-The getFirst() method is used to get the elements from the beginning of the list.
-
- getLast()
-The getLast() method is used to get the elements from the end of the list.
-
-clear()
-The clear() method is used to remove all the elements from the list.
-
-clone()
-A shallow copy of the linked list is returned using clone() method.
-
-peek()
-The head of the list is retrieved using peek() method.
-
-peekFirst()
-The first element of the list is retrieved using peekFirst() method.
-
-peekLast()
-The last element of the list is retrieved using peekLast() method.
-
-poll()
-The head of the list is retrieved and removed using poll() method.
-
-pollFirst()
-The first element of the list is retrieved and removed using pollFirst() method.
-
-pollLast()
-The last element of the list is retrieved and removed using pollLast() method.
-
-size()
-The number of elements present in the list is returned using size() method.
-
-get(int index)
-The element present at the position specified by the index is returned using get(int index) method.
-
-element()
-The head of the list is retrieved but not removed using element() method.
-
- */
- 
+        System.out.println("Element at index 1: " + list2.get(1));
+        System.out.println("Element (head not removed): " + list2.element());
+    }
+}
